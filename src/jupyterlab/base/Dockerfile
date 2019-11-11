@@ -12,7 +12,7 @@ ENV JUPYTER_IP="0.0.0.0" \
 ARG NODE_VERSION=""
 
 RUN apt-get update && \
-    apt-get -y install curl && \
+    apt-get -y install gcc curl wget && \
     curl -sL https://deb.nodesource.com/setup_${NODE_VERSION}.x | bash - && \
     apt-get -y install nodejs && \
     pip install jupyterlab \
