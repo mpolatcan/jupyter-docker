@@ -9,7 +9,7 @@ jobs:
       matrix:
         repository: [jupyter, jupyterlab]
         node_version: [13]
-        python_version: [3.5, 3.6, 3.7]
+        python_version: [3.6, 3.7, 3.8]
     steps:
       - uses: actions/checkout@v1
       - run: echo ${{secrets.DOCKER_PASSWORD}} | docker login -u ${{secrets.DOCKER_USERNAME}} --password-stdin
@@ -27,7 +27,7 @@ jobs:
       matrix:
         repository: [jupyter, jupyterlab]
         tier: [general]
-        python_version: [3.5, 3.6, 3.7]
+        python_version: [3.6, 3.7, 3.8]
     needs: build-base-images
     steps:
       - uses: actions/checkout@v1
@@ -45,7 +45,7 @@ jobs:
       matrix:
         repository: [jupyter, jupyterlab]
         tier: [spark]
-        python_version: [3.5, 3.6, 3.7]
+        python_version: [3.6, 3.7, 3.8]
     needs: build-general-images
     steps:
       - uses: actions/checkout@v1
