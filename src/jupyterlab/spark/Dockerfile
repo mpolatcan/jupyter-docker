@@ -4,6 +4,8 @@ ARG PYTHON_VERSION=""
 
 FROM mpolatcan/jupyterlab:general-python${PYTHON_VERSION}
 
+ARG SPARK_VERSION=""
+
 MAINTAINER Mutlu Polatcan <mutlupolatcan@gmail.com>
 
 RUN apt-get update && \
