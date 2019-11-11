@@ -1,3 +1,5 @@
+# JupyterLab sparkmagic extension installed image addition to general image mpolatcan/jupyterlab:general-python${PYTHON_VERSION}
+# to establish connection with Spark cluster within JupyterLab notebook.
 ARG PYTHON_VERSION=""
 
 FROM mpolatcan/jupyterlab:general-python${PYTHON_VERSION}

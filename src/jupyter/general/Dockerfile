@@ -1,3 +1,4 @@
+# Jupyter general extensions installed image addition to base image mpolatcan/jupyter:base-python${PYTHON_VERSION}
 ARG PYTHON_VERSION=""
 
 FROM mpolatcan/jupyter:base-python${PYTHON_VERSION}
@@ -10,7 +11,7 @@ RUN pip install ipyleaflet \
                 papermill[all] \
                 pythreejs \
                 tensorwatch \
-                gmaps
+                gmaps \
                 qgrid && \
     jupyter nbextension install --py --symlink --sys-prefix pythreejs && \
     jupyter nbextension enable --py --sys-prefix ipyleaflet \

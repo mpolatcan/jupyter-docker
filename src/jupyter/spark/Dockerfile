@@ -1,3 +1,5 @@
+# Jupyter sparkmagic extension installed image addition to general image mpolatcan/jupyter:general-python${PYTHON_VERSION}
+# to establish connection with Spark cluster within Jupyter notebook.
 ARG PYTHON_VERSION=""
 
 FROM mpolatcan/jupyter:general-python${PYTHON_VERSION}

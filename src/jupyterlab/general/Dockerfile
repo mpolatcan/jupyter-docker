@@ -1,4 +1,5 @@
-# JupyterLab Docker image with installed extensions addition to base image mpolatcan/jupyterlab:base-python${PYTHON_VERSION}
+# JupyterLab Docker image with installed general use extensions addition to base image
+# mpolatcan/jupyterlab:base-python${PYTHON_VERSION}
 ARG PYTHON_VERSION=""
 
 FROM mpolatcan/jupyterlab:base-python${PYTHON_VERSION}

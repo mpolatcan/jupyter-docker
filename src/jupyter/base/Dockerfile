@@ -1,3 +1,4 @@
+# Jupyter installed image with core libraries like gcc, curl and wget
 ARG PYTHON_VERSION=""
 
 FROM python:${PYTHON_VERSION}-slim
