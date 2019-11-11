@@ -7,7 +7,7 @@ FROM mpolatcan/jupyter:general-python${PYTHON_VERSION}
 MAINTAINER Mutlu Polatcan <mutlupolatcan@gmail.com>
 
 RUN apt-get update && \
-    apt-get -y install libkrb5-dev && \
+    apt-get -y install libkrb5-dev krb5-config && \
     pip install sparkmagic && \
     jupyter serverextension enable --py sparkmagic && \
     kernels_dir=$(pip show sparkmagic | grep Location | cut -b 11-)/sparkmagic/kernels && \
