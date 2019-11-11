@@ -4,12 +4,12 @@ ARG PYTHON_VERSION=""
 
 FROM python:${PYTHON_VERSION}-slim
 
-ARG NODE_VERSION=""
+MAINTAINER Mutlu Polatcan <mutlupolatcan@gmail.com>
 
 ENV JUPYTER_IP="0.0.0.0" \
     JUPYTER_PORT=8888
 
-MAINTAINER Mutlu Polatcan <mutlupolatcan@gmail.com>
+ARG NODE_VERSION=""
 
 RUN apt-get update && \
     apt-get -y install curl && \
