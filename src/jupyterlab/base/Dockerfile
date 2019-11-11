@@ -11,6 +11,8 @@ ENV JUPYTER_IP="0.0.0.0" \
 
 ARG NODE_VERSION=""
 
+WORKDIR /jupyter
+
 RUN apt-get update && \
     apt-get -y install gcc curl wget && \
     curl -sL https://deb.nodesource.com/setup_${NODE_VERSION}.x | bash - && \

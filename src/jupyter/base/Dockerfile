@@ -8,6 +8,8 @@ ENV JUPYTER_PORT="8888"
 
 MAINTAINER Mutlu Polatcan <mutlupolatcan@gmail.com>
 
+WORKDIR /jupyter
+
 RUN apt-get update && \
     apt-get -y install gcc curl wget && \
     pip install jupyter && \
