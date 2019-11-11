@@ -11,7 +11,7 @@ ENV JUPYTER_IP="0.0.0.0" \
 
 ARG NODE_VERSION=""
 
-WORKDIR /jupyter
+WORKDIR /jupyter_home
 
 RUN apt-get update && \
     apt-get -y install gcc curl wget && \
