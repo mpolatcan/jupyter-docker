@@ -14,7 +14,8 @@ RUN pip install ipyleaflet \
                 pythreejs \
                 sidecar \
                 tensorwatch \
-                gmaps && \
+                gmaps \
+                jupyternotify && \
     jupyter labextension install ipysheet \
                                  jupyter-leaflet \
                                  jupyter-matplotlib \

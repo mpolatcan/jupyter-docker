@@ -12,7 +12,8 @@ RUN pip install ipyleaflet \
                 pythreejs \
                 tensorwatch \
                 gmaps \
-                qgrid && \
+                qgrid \
+                jupyternotify && \
     jupyter nbextension install --py --symlink --sys-prefix pythreejs && \
     jupyter nbextension enable --py --sys-prefix ipyleaflet && \
     jupyter nbextension enable --py --sys-prefix ipysheet && \
