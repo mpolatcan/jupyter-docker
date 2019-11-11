@@ -1,6 +1,5 @@
 ARG PYTHON_VERSION=""
 
-# TODO Install Spark Monitor extension
 FROM mpolatcan/jupyter:base-python${PYTHON_VERSION}
 
 MAINTAINER Mutlu Polatcan <mutlupolatcan@gmail.com>
