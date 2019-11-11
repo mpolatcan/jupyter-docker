@@ -14,11 +14,11 @@ RUN pip install ipyleaflet \
                 gmaps \
                 qgrid && \
     jupyter nbextension install --py --symlink --sys-prefix pythreejs && \
-    jupyter nbextension enable --py --sys-prefix ipyleaflet \
-                                                 ipysheet \
-                                                 gmaps \
-                                                 pythreejs \
-                                                 qgrid \
-                                                 widgetsnbextension
+    jupyter nbextension enable --py --sys-prefix ipyleaflet && \
+    jupyter nbextension enable --py --sys-prefix ipysheet && \
+    jupyter nbextension enable --py --sys-prefix gmaps && \
+    jupyter nbextension enable --py --sys-prefix pythreejs && \
+    jupyter nbextension enable --py --sys-prefix qgrid && \
+    jupyter nbextension enable --py --sys-prefix widgetsnbextension
 
 ENTRYPOINT jupyter lab --ip ${JUPYTER_IP} --port ${JUPYTER_PORT} --no-browser --allow-root
