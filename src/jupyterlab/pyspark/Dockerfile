@@ -1,8 +1,6 @@
-# JupyterLab sparkmagic extension installed image addition to general image mpolatcan/jupyterlab:general-python${PYTHON_VERSION}
-# to establish connection with Spark cluster within JupyterLab notebook.
 ARG PYTHON_VERSION=""
 
-FROM mpolatcan/jupyterlab:general-python${PYTHON_VERSION}
+FROM mpolatcan/jupyterlab:base-python${PYTHON_VERSION}
 
 ARG SPARK_VERSION=""
 
@@ -16,5 +14,3 @@ RUN apt-get update && \
     kernels_dir=$(pip show sparkmagic | grep Location | cut -b 11-)/sparkmagic/kernels && \
     jupyter-kernelspec install ${kernels_dir}/sparkkernel ${kernels_dir}/pysparkkernel && \
     rm -rf /var/lib/apt/lists/*
-
-ENTRYPOINT jupyter lab --ip ${JUPYTER_IP} --port ${JUPYTER_PORT} --no-browser --allow-root
