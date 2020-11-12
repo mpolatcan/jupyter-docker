@@ -6,7 +6,7 @@ MAINTAINER Mutlu Polatcan <mutlupolatcan@gmail.com>
 
 WORKDIR /jupyter_home
 
-ADD entrypoint.sh ./
+ADD entrypoint.sh ./entrypoint.sh
 
 RUN apt-get update && \
     apt-get -y install gcc curl wget && \
